@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:44:31 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/06 16:12:28 by dpiedra          ###   ########.fr       */
+/*   Created: 2019/11/06 17:25:17 by dpiedra           #+#    #+#             */
+/*   Updated: 2019/11/06 17:38:54 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*s;
-	unsigned char	*d;
+	unsigned char	*str;
+	int				i;
 
-	s = (unsigned char *)src;
-	d = (unsigned char *)dst;
+	str = (unsigned char *)s;
+	i = 0;
 	while (n--)
 	{
-		*d = *s;
-		d++;
-		s++;
+		if (str[i] == (unsigned char)c)
+			return (str + i);
+		i++;
 	}
-	return (dst);
+	return (NULL);
 }

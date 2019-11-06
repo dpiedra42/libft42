@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:44:31 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/06 16:12:28 by dpiedra          ###   ########.fr       */
+/*   Created: 2019/11/06 14:59:56 by dpiedra           #+#    #+#             */
+/*   Updated: 2019/11/06 18:13:20 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*s;
-	unsigned char	*d;
+	unsigned char *dest;
+	unsigned char *source;
 
-	s = (unsigned char *)src;
-	d = (unsigned char *)dst;
-	while (n--)
+	dest = (unsigned char *)dst;
+	source = (unsigned char *)src;
+
+	if (dest < source)
 	{
-		*d = *s;
-		d++;
-		s++;
+		while (len--)
+		{
+			*dest = *source;
+			dest++;
+			source++;
+		}
 	}
+	else
+		while (len--)
+			dest[len] = source[len];
 	return (dst);
+}
+
+int main()
+{
+	char str[] = "hello buddy!";
+	printf("%s", ft_memmove());
+	return (0);
 }
