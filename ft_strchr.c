@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:53:53 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/05 13:17:19 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/05 16:28:15 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 
 char	*ft_strchr(const char *s, int c)
@@ -26,12 +25,4 @@ char	*ft_strchr(const char *s, int c)
 			i++;
 	}
 	return (NULL);
-}
-
-int main()
-{
-	char s1[] = "hkd d ihfd d";
-	printf("%s\n", ft_strchr(s1, 'd'));
-	printf("%s", ft_strchr(s1, 'd'));
-	return (0);
 }

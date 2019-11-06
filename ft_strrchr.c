@@ -6,12 +6,11 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:17:51 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/04 17:53:28 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/05 16:29:47 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -28,12 +27,4 @@ char	*ft_strrchr(const char *s, int c)
 			len--;
 	}
 	return (NULL);
-}
-
-int main()
-{
-	char s1[] = "im deannaa d daa";
-	printf("%s\n", ft_strrchr(s1, 'd'));
-	printf("%s", strrchr(s1, 'd'));
-	return (0);
 }
