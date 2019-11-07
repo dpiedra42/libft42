@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 10:55:15 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/07 16:32:18 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/07 19:45:49 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = ft_strlen(dst);
 	result = ft_strlen(src);
 	if (dstsize <= i)
+	{
 		result = result + dstsize;
+		return (result);
+	}
 	else
-		result = result + 1;
+		result = result + i;
 	j = 0;
 	while (src[j] != '\0' && i + 1 < dstsize)
 	{
