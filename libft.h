@@ -6,12 +6,12 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:02:14 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/07 16:14:26 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/07 16:49:16 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBFT.H
+# define LIBFT_H
 
 #include <stdlib.h>
 
