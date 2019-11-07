@@ -6,11 +6,12 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:25:17 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/06 17:38:54 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/07 16:08:14 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

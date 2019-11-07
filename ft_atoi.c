@@ -6,9 +6,11 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:58:28 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/05 13:22:37 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/07 16:06:09 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

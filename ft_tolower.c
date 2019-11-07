@@ -6,9 +6,11 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:42:12 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/04 14:10:13 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/07 16:13:20 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

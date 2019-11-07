@@ -6,11 +6,12 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 11:40:46 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/07 12:09:09 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/07 16:07:23 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
