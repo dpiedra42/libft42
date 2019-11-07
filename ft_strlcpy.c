@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:44:31 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/07 10:23:17 by dpiedra          ###   ########.fr       */
+/*   Created: 2019/11/06 18:15:17 by dpiedra           #+#    #+#             */
+/*   Updated: 2019/11/07 11:08:44 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned char	*s;
-	unsigned char	*d;
+	size_t i;
+	size_t len;
 
-	s = (unsigned char *)src;
-	d = (unsigned char *)dst;
-	while (n--)
+	i = 0;
+	len = 0;
+	while (dst[len] != '\0')
+		len++;
+	while (src[i] != '\0' && i + 1 < dstsize)
 	{
-		*d = *s;
-		d++;
-		s++;
+		dst[len + i] = src[i];
+		i++;
 	}
-	return (dst);
+	dst[len + i] = '\0';
+	i = 0;
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }

@@ -6,14 +6,13 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 13:18:06 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/06 14:55:30 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/07 10:23:48 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src,
-					int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char *dest;
 	unsigned char *source;

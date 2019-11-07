@@ -6,13 +6,11 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:59:56 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/06 18:13:20 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/07 10:22:11 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -31,15 +29,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			source++;
 		}
 	}
-	else
+	else if (dest > source)
 		while (len--)
-			dest[len] = source[len];
+			*(dest + len) = *(source + len);
 	return (dst);
-}
-
-int main()
-{
-	char str[] = "hello buddy!";
-	printf("%s", ft_memmove());
-	return (0);
 }
