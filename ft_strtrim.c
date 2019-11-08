@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/08 14:47:06 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/08 17:34:43 by dpiedra          ###   ########.fr       */
+/*   Created: 2019/11/08 17:24:54 by dpiedra           #+#    #+#             */
+/*   Updated: 2019/11/08 17:40:34 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	char	*sjoin;
-	size_t	len1;
-	size_t	len2;
-
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	if (!(sjoin = malloc(sizeof(char) * ((len1 + len2) + 1))))
-		return (NULL);
-	ft_memmove(sjoin, s1, len1);
-	ft_memmove(sjoin + len1, s2, len2);
-	sjoin[len1 + len2] = '\0';
-	return (sjoin);
+	
 }
