@@ -6,32 +6,25 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 14:47:06 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/08 15:25:58 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/08 17:23:13 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*join;
-	size_t	c;
-	size_t	d;
+	char	*sjoin;
+	size_t	str1;
+	size_t	str2;
 
-	c = strlen(s1);
-	d = strlen(s2);
-	if (!(join = malloc(sizeof(char) * ((c + d) + 1))))
+	str1 = ft_strlen(s1);
+	str2 = ft_strlen(s2);
+	if (!(sjoin = malloc(sizeof(char) * ((str1 + str2) + 1))))
 		return (NULL);
-
-}
-
-int main()
-{
-	char str[] = "hello";
-	char str2[] = "goodbye";
-	printf("%s", (str. str2));
-	return (0);
+	ft_memcpy(sjoin, s1, str1);
+	ft_memcpy(sjoin + str1, s2, str2);
+	sjoin[str1 + str2] = '\0';
+	return (sjoin);
 }
