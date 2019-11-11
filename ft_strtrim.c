@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 17:24:54 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/11 16:17:29 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/11 18:37:13 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*newstr;
 	size_t	newlen;
-	int		start;
+	size_t	start;
 	int		end;
 
 	newlen = 0;
@@ -40,11 +40,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1) - 1;
 	if (!s1 || !set)
 		return (NULL);
-	while (ft_issep(s1[start], set) == 1)
+	while (ft_issep(s1[start], set) == 1 && s1[start] != '\0')
 		start++;
-	while (ft_issep(s1[end], set) == 1)
+	while (ft_issep(s1[end], set) == 1 && end > 0)
 		end--;
-	newlen = end + 1 - start;
+	if (start == ft_strlen(s1))
+		newlen = 0;
+	else
+		newlen = end + 1 - start;
 	if (!(newstr = malloc(sizeof(char) * (newlen + 1))))
 		return (NULL);
 	newstr = ft_substr(s1, start, newlen);
