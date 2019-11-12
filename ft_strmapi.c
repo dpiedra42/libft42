@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 15:59:19 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/12 17:54:55 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/12 18:41:54 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (s[i] != '\0')
 	{
 		snew[i] = (*f)(i, s[i]);
+		i++;
 	}
 	snew[i] = '\0';
 	return (snew);
