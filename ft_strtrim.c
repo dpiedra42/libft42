@@ -6,14 +6,14 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 17:24:54 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/11 18:37:13 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/12 16:21:52 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int		ft_issep(char c, const char *set)
+static int	ft_issep(char c, const char *set)
 {
 	int i;
 
@@ -28,7 +28,7 @@ int		ft_issep(char c, const char *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*newstr;
 	size_t	newlen;
