@@ -6,7 +6,7 @@
 #    By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 14:03:22 by dpiedra           #+#    #+#              #
-#    Updated: 2019/11/11 16:20:03 by dpiedra          ###   ########.fr        #
+#    Updated: 2019/11/12 11:12:50 by dpiedra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c \
 			ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c \
 			ft_strnstr.c ft_strrchr.c ft_tolower.c ft_toupper.c \
-			ft_substr.c ft_strjoin.c  ft_strtrim.c
+			ft_substr.c ft_strjoin.c  ft_strtrim.c ft_split.c \
+			
 			
 OBJ		=	$(SRCS:.c=.o)
 

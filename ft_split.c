@@ -6,40 +6,63 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 16:30:42 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/11 17:18:27 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/12 11:19:30 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
+
+int		ft_wordcount(const char *s, char c)
+{
+	int wordnum;
+	int i;
+
+	wordnum = 0;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if ((s[i + 1] == c && s[i] != c) || (s[i + 1] == '\0' && s[i] != c))
+			wordnum++;
+		i++;
+	}
+	return (wordnum);
+}
+
+void	ft_copyword(char **tab, char const *s, char c)
+{
+	int i;
+	int wordlength;
+	int strnum;
+
+	i = 0;
+	strnum = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			i++;
+		else
+		{
+			wordlength = 0;
+			while (s[i + wordlength] != c && s[i + wordlength] != '\0')
+				wordlength++;
+			tab[strnum] = (char *)malloc(sizeof(char) * (wordlength + 1));
+			tab[strnum] = ft_substr(s, i, wordlength);
+			i = i + wordlength;
+			strnum++;
+		}
+	}
+}
 
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		strs;
-	int		i;
 
-	strs = 0;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-		{
-			strs++;
-			i++;
-		}
-		else
-			i++;
-	}
-	printf("%d\n", strs);
+	strs = ft_wordcount(s, c);
+	if (!(tab = (char **)malloc(sizeof(char *) * (strs + 1))))
+		return (NULL);
+	tab[strs] = NULL;
+	ft_copyword(tab, s, c);
 	return (tab);
-}
-
-int		main(void)
-{
-	char str[] = "who what when where why";
-	ft_split(str, 'w');
-	return (0);
 }
