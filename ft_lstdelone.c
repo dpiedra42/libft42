@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 15:52:58 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/15 11:08:47 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/15 12:13:02 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst)
+	if (!lst || !del)
 		return ;
-	*lst = (*del)(*);
+	if (lst && del)
+	{
+		(*del)((void*)lst->content);
+		free(lst);
+	}
 }
