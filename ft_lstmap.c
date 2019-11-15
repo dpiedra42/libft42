@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 14:40:55 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/15 16:01:32 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/15 16:31:47 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,36 +16,23 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list *new;
-	t_list *lstcont;
+	t_list *result;
 
 	if (!lst || !f || !del)
 		return (NULL);
-	lstcont = (*f)((void*)lst->content);
-	if (!(new = ft_lstnew(lstcont)))
+	if (!(new = ft_lstnew((f)((void *)lst->content))))
 		return (NULL);
-	lst = lst->next;	
-}
-
-	t_list	*alst;
-	t_list	*newlst;
-	void	*tmp;
-
-	if (!lst || !f)
-		return (NULL);
-	tmp = (*f)(lst->content);
-	if (!(newlst = ft_lstnew(tmp)))
-		return (NULL);
-	alst = newlst;
+	result = new;
 	lst = lst->next;
 	while (lst)
 	{
-		tmp = (*f)(lst->content);
-		if (!(newlst->next = ft_lstnew(tmp)))
+		if (!(new = ft_lstnew((f)((void *)lst->content))))
 		{
-			ft_lstclear(&alst, del);
+			ft_lstclear(&result, del);
 			return (NULL);
 		}
-		newlst = newlst->next;
 		lst = lst->next;
+		new = new->next;
 	}
-	return (alst);
+	return (result);
+}
