@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 13:56:27 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/15 14:39:47 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/15 15:57:01 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst)
 	{
-		(*f)((void*)lst->content);
+		(*f)((void *)lst->content);
 		lst = lst->next;
 	}
 }

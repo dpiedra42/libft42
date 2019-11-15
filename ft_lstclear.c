@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 12:02:58 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/15 13:50:59 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/15 15:57:09 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (element)
 	{
 		successor = element->next;
-		(*del)((void*)element->content);
+		(*del)((void *)element->content);
 		free(element);
 		element = successor;
 	}
