@@ -6,7 +6,7 @@
 #    By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 14:03:22 by dpiedra           #+#    #+#              #
-#    Updated: 2019/11/15 14:52:22 by dpiedra          ###   ########.fr        #
+#    Updated: 2019/11/18 11:51:58 by dpiedra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,11 +42,11 @@ all		:	$(NAME)
 
 $(NAME)	:	$(OBJ)
 			$(CC) $((SRCS) libft.h $(CFLAGS) 
-			ar -r $(NAME) $(OBJ) $(HEADER)
+			ar -rcs $(NAME) $(OBJ) $(HEADER)
 
 bonus	:	$(OBONUS)
 			$(CC) $((SBONUS) libft.h $(CFLAGS) 
-			ar -r $(NAME) $(OBONUS) $(HEADER)	
+			ar -rcs $(NAME) $(OBONUS) $(HEADER)	
 
 clean	:
 			$(RM) $(OBJ) $(OBONUS)
