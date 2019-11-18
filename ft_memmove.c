@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:59:56 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:27:13 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:23:12 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

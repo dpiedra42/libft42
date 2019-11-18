@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:13:36 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:26:55 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:23:05 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

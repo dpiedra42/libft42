@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:12:18 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:28:14 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:25:01 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 size_t	ft_strlen(const char *str)

@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:15:17 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:28:11 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:24:57 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

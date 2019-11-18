@@ -6,7 +6,7 @@
 #    By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 14:03:22 by dpiedra           #+#    #+#              #
-#    Updated: 2019/11/18 11:51:58 by dpiedra          ###   ########.fr        #
+#    Updated: 2019/11/18 14:21:28 by dpiedra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,10 @@ SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			ft_itoa.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c \
 			ft_putendl_fd.c ft_putnbr_fd.c 
 
-SBONUS	=	ft_lstnew.c ft_lstsize.c ft_lstlast.c ft_lstadd_front.c \
-			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-			ft_lstmap.c
+SBONUS	=	ft_lstnew_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
+			ft_lstadd_front_bonus.c ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c
 
 OBJ		=	$(SRCS:.c=.o)
 

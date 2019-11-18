@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 13:18:06 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:26:35 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:22:56 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)

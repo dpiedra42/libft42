@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:17:51 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:28:53 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:25:29 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

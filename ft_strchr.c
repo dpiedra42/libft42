@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:53:53 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:27:50 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:28:26 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -25,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 		else
 			i++;
 	}
-	if (c == '\0')
+	if (c == 0)
 		return ((char *)s + i);
 	return (NULL);
 }

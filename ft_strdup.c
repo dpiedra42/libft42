@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 12:09:55 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:28:00 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:24:35 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *src)
@@ -19,10 +18,10 @@ char	*ft_strdup(const char *src)
 	size_t	i;
 	size_t	j;
 
+	if (src == NULL)
+		return (NULL);
 	i = ft_strlen(src);
 	if (!(dest = malloc(sizeof(char) * (i + 1))))
-		return (NULL);
-	if (dest == NULL)
 		return (NULL);
 	j = 0;
 	while (src[j] != '\0')

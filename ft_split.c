@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 16:30:42 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:27:46 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:24:04 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int		ft_wordcount(const char *s, char c)
@@ -46,7 +45,9 @@ static void		ft_copyword(char **tab, char const *s, char c)
 			wordlength = 0;
 			while (s[i + wordlength] != c && s[i + wordlength] != '\0')
 				wordlength++;
-			tab[strnum] = (char *)malloc(sizeof(char) * (wordlength + 1));
+			if (!(tab[strnum] =
+				(char *)malloc(sizeof(char) * (wordlength + 1))))
+				return ;
 			tab[strnum] = ft_substr(s, i, wordlength);
 			i = i + wordlength;
 			strnum++;

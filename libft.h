@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:02:14 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/15 16:42:30 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:29:45 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct		s_list
 {

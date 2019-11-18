@@ -6,12 +6,11 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 17:24:54 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:28:56 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:25:33 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_issep(char c, const char *set)
 {

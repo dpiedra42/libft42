@@ -6,11 +6,10 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:47:31 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:28:26 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:25:13 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
