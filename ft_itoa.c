@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 11:21:00 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/18 11:25:16 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 11:32:59 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	ft_nlength(long n)
 	return (len);
 }
 
-static char	*ft_makestr(long int n, char *str, int neg, char nlength)
+static char		*ft_makestr(long int n, char *str, int neg, char nlength)
 {
 	if (neg == 1)
 		str[0] = '-';
@@ -46,7 +46,7 @@ static char	*ft_makestr(long int n, char *str, int neg, char nlength)
 	return (str);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char		*str;
 	size_t		nlen;
