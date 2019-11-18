@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 17:24:54 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/12 16:21:52 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 11:07:42 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	int		end;
 
+	if (!s1 || !set)
+		return (NULL);
 	newlen = 0;
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	if (!s1 || !set)
-		return (NULL);
 	while (ft_issep(s1[start], set) == 1 && s1[start] != '\0')
 		start++;
 	while (ft_issep(s1[end], set) == 1 && end > 0)

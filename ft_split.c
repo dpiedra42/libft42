@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 16:30:42 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/12 16:21:29 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 11:08:19 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ char			**ft_split(char const *s, char c)
 	char	**tab;
 	int		strs;
 
+	if (!s)
+		return (NULL);
 	strs = ft_wordcount(s, c);
 	if (!(tab = (char **)malloc(sizeof(char *) * (strs + 1))))
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 14:47:06 by dpiedra           #+#    #+#             */
-/*   Updated: 2019/11/08 17:34:43 by dpiedra          ###   ########.fr       */
+/*   Updated: 2019/11/18 11:04:32 by dpiedra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len1;
 	size_t	len2;
 
+	if (!s1 && s2)
+		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	if (!(sjoin = malloc(sizeof(char) * ((len1 + len2) + 1))))
