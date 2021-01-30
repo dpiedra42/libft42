@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: deannapiedra <deannapiedra@student.42.f    +#+  +:+       +#+         #
+#    By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 14:03:22 by dpiedra           #+#    #+#              #
-#    Updated: 2020/02/07 11:56:55 by deannapiedr      ###   ########.fr        #
+#    Updated: 2021/01/30 14:55:34 by dpiedra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,3 @@ fclean	:	clean
 			$(RM) $(NAME)
 
 re		:	fclean all
-
-%.o		:	%.c
-			$(CC) $(FLAGS) $(HEADER) -c $<  -o $(<:.c=.o)
